@@ -2,7 +2,8 @@ use dialoguer;
 use std::io;
 use console;
 use sysinfo;
-use block_utils;
+use block_utils::get_block_devices;
+use os;
 enum Kernel {
     linux,
     linuxLTS,
@@ -95,7 +96,7 @@ fn partition_drives() -> Vec<Drive>{
     let mut drives: Vec<Drive>;
 
     fn get_drives() {
-        let block_devices = block_utils::get_block_devices();
+        let block_devices = get_block_devices();
         for i in block_devices {
             println!("{}",i);
         }
