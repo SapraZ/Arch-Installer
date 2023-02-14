@@ -1,12 +1,20 @@
 [package]
-name = "Arch-Installer"
+name = "arch-installer"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+ansi_term = "0.12.1"
 block-utils = "0.10.7"
+bytesize = "1.1.0"
+chrono-tz = "0.7.0"
 console = "0.15.2"
-dialoguer = "0.10.2"
-pkg-config = "0.3.25"
+derivative = "2.2.0"
+dialoguer = { version = "0.10.2", features = ["fuzzy-select"] }
+fuzzy-matcher = "0.3.7"
+indicatif = "0.17.1"
+online = "4.0.0"
+strum = "0.24.1"
+strum_macros = "0.24.3"
